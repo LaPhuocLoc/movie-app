@@ -23,7 +23,7 @@
   left: 0;
   width: 100%;
   z-index: 99;
-  transition: height 0.3 ease, background-color 0.3 ease;
+  transition: height 0.3s ease, background-color 0.3s ease;
 
   &.shrink {
     height: $header-shrink-height;

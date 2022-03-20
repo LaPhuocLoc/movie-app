@@ -9,7 +9,6 @@ import Button, { OutlineButton } from '../button/Button'
 import Input from '../input/Input'
 
 const MovieGrid = props => {
-
   const [items, setItems] = useState([])
 
   const [page, setPage] = useState(1)

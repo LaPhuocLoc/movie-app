@@ -7,6 +7,7 @@ import './detail.scss'
 import CastList from './CastList'
 import VideoList from './VideoList'
 import MovieList from '../../components/movie-list/MovieList'
+import Sweep from '../../components/sweep/Sweep'
 const Detail = () => {
 
   const { category, id } = useParams()
@@ -24,6 +25,7 @@ const Detail = () => {
 
   return (
     <>
+      <Sweep id={id}/>
       {
         item && (
           <>
@@ -63,9 +65,9 @@ const Detail = () => {
                 <div className="section__header mb-2">
                   <h2>Similar</h2>
                 </div>
-                <MovieList category={category} type="similar" 
-// @ts-ignore
-                id={item.id}/>
+                <MovieList category={category} type="similar"
+                  // @ts-ignore
+                  id={item.id} />
               </div>
             </div>
           </>

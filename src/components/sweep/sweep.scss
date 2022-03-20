@@ -1,0 +1,21 @@
+@use "../../scss/" as *;
+.sweep {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(17,17,17);
+  // animation-name: sweep;
+  // animation-duration: 1s;
+  // animation-fill-mode: forwards;
+  z-index: 9999;
+}
+// @keyframes sweep {
+//   from {
+//     transform: translateY(0);
+//   }
+//   to {
+//     transform: translateY(100%);
+//   }
+// }
