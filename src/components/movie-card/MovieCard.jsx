@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 
 import apiConfig from '../../api/apiConfig'
 import tmdbApi, { category } from '../../api/tmdbApi'
+import noPoster from '../../assets/no-poster.png'
 
 import Button from '../../components/button/Button'
 
@@ -15,7 +16,7 @@ const MovieCard = props => {
 
   const link = '/' + category[props.category] + '/' + item.id
 
-  const bg = apiConfig.w500Image(item.poster_path || item.backdrop_path)??apiConfig.originalImage(item.poster_path || item.backdrop_path)
+  const bg = ((item.poster_path || item.backdrop_path) ? apiConfig.w500Image(item.poster_path || item.backdrop_path) : noPoster)
 
   return (
     <Link to={link}>
