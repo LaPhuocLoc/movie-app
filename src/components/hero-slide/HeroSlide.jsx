@@ -23,6 +23,7 @@ const HeroSlide = () => {
     const getMovies = async () => {
       const params = {
         page: 1,
+        language: 'ja'
       }
       try {
         const response = await tmdbApi.getMoviesList(movieType.popular, { params })

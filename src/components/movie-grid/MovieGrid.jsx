@@ -20,16 +20,19 @@ const MovieGrid = props => {
     const getList = async () => {
       let response = null;
       if (keyword === undefined) {
-        const params = {}
+        const params = {
+          language: 'ja'
+        }
         switch (props.category) {
           case category.movie:
-            response = await tmdbApi.getMoviesList(movieType.upcoming, { params })
+            response = await tmdbApi.getMoviesList(movieType.popular, { params })
             break;
           default:
             response = await tmdbApi.getTvList(tvType.popular, { params })
         }
       } else {
         const params = {
+          language: 'ja',
           query: keyword
         }
         response = await tmdbApi.search(props.category, { params })
