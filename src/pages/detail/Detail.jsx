@@ -25,7 +25,7 @@ const Detail = () => {
 
   return (
     <>
-      <Sweep id={id}/>
+      <Sweep id={id} />
       {
         item && (
           <>
@@ -48,7 +48,7 @@ const Detail = () => {
                     ))
                   }
                 </div>
-                <p className="overview">{item.overview}</p>
+                <p className="overview">{item.overview || `${item.title || item.name} のレビューはまだありません。`}</p>
                 <div className="cast">
                   <div className="section__header">
                     <h2>Cast</h2>
