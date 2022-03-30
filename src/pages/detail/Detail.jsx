@@ -7,7 +7,7 @@ import './detail.scss'
 import CastList from './CastList'
 import VideoList from './VideoList'
 import MovieList from '../../components/movie-list/MovieList'
-import Sweep from '../../components/sweep/Sweep'
+
 const Detail = () => {
 
   const { category, id } = useParams()
@@ -22,10 +22,9 @@ const Detail = () => {
     }
     getDetail()
   }, [category, id])
-  
+
   return (
     <>
-      <Sweep id={id} />
       {
         item && (
           <>
@@ -72,8 +71,8 @@ const Detail = () => {
             </div>
           </>
         )
-
       }
+
     </>
   )
 }

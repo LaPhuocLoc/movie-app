@@ -49,8 +49,8 @@ export const ModalContent = props => {
         <i className="bx bx-x"></i>
       </div>
     </div>
-  )
-}
+  )         
+}                   
 
 ModalContent.propTypes = {
   onClose: PropTypes.func,
