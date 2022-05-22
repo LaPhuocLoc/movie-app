@@ -7,20 +7,20 @@ import { useRef, useEffect } from "react";
 
 import logo from "../../assets/myMovies.png";
 
-const headerNav = [
-  {
-    display: "Home",
-    path: "/",
-  },
-  {
-    display: "Movies",
-    path: "/movie",
-  },
-  {
-    display: "TV Series",
-    path: "/tv",
-  },
-];
+  const headerNav = [
+    {
+      display: "Home",
+      path: "/",
+    },
+    {
+      display: "Movies",
+      path: "/movie",
+    },
+    {
+      display: "TV Series",
+      path: "/tv",
+    },
+  ];
 
 const Header = () => {
   const { pathname } = useLocation();

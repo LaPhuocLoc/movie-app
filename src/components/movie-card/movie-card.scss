@@ -15,16 +15,18 @@
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
     bottom: 0;
-    width: 0%;
-    background-color: $black;
     background-color: rgba(0, 0, 0, 0.69);
-    transition: width 0.3s ease;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: right;
   }
 
   @media (hover: hover) and (pointer: fine) {
     &:hover::before {
-      width: 100%;
+      transform: scaleX(1);
+      transform-origin: left;
     }
   }
 }
